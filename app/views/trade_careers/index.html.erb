@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Trade Careers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paab complete</th>
+      <th>Paab result</th>
+      <th>Next paab</th>
+      <th>Tiffy maths req</th>
+      <th>Tiffy maths complete</th>
+      <th>Class 2</th>
+      <th>Class 1</th>
+      <th>Artificer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trade_careers.each do |trade_career| %>
+      <tr>
+        <td><%= trade_career.paab_complete %></td>
+        <td><%= trade_career.paab_result %></td>
+        <td><%= trade_career.next_paab %></td>
+        <td><%= trade_career.tiffy_maths_req %></td>
+        <td><%= trade_career.tiffy_maths_complete %></td>
+        <td><%= trade_career.class_2 %></td>
+        <td><%= trade_career.class_1 %></td>
+        <td><%= trade_career.artificer %></td>
+        <td><%= link_to 'Show', trade_career %></td>
+        <td><%= link_to 'Edit', edit_trade_career_path(trade_career) %></td>
+        <td><%= link_to 'Destroy', trade_career, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trade career', new_trade_career_path %>

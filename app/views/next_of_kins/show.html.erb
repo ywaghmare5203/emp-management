@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @next_of_kin.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @next_of_kin.last_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @next_of_kin.address %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @next_of_kin.contact_number %>
+</p>
+
+<p>
+  <strong>Relation:</strong>
+  <%= @next_of_kin.relation %>
+</p>
+
+<%= link_to 'Edit', edit_next_of_kin_path(@next_of_kin) %> |
+<%= link_to 'Back', next_of_kins_path %>

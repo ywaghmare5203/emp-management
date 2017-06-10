@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paab_complete: 2015-05-18
+  paab_result: MyString
+  next_paab: 2015-05-18
+  tiffy_maths_req: false
+  tiffy_maths_complete: false
+  class_2: 2015-05-18
+  class_1: 2015-05-18
+  artificer: 2015-05-18
+
+two:
+  paab_complete: 2015-05-18
+  paab_result: MyString
+  next_paab: 2015-05-18
+  tiffy_maths_req: false
+  tiffy_maths_complete: false
+  class_2: 2015-05-18
+  class_1: 2015-05-18
+  artificer: 2015-05-18

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @role.employee_id %>
+</p>
+
+<p>
+  <strong>PID:</strong>
+  <%= @role.pid %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @role.description %>
+</p>
+
+<p>
+  <strong>Line Manager:</strong>
+  ", "
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @role.section %>
+</p>
+
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Add Subordinate', new_child_path(:parent_id => @role) %> |
+<%= link_to 'Add Superior', new_parent_path(:child_id => @role) %>
+<%= link_to 'Back', roles_path %>

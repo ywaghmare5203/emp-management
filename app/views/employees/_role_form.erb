@@ -1,0 +1,4 @@
+<%= semantic_fields_for :assignments do |assignment| %>
+    <%= render 'assignment_fields', f: assignment %>
+<% end %> 
+<%= link_to_add_association 'add role', employee, :assignments, 'data-association-insertion-node' => "#employee-roles ol", 'data-association-insertion-method' => "append", :wrap_object => Proc.new { |quantity| quantity.build_role; assignment } %>

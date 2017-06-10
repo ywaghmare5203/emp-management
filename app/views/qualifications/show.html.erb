@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @qualification.type %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @qualification.title %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @qualification.grade %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @qualification.end_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @qualification.status %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @qualification.school %>
+</p>
+
+<%= link_to 'Edit', edit_qualification_path(@qualification) %> |
+<%= link_to 'Back', qualifications_path %>

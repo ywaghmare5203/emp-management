@@ -1,0 +1,2 @@
+module TradeCareersHelper
+end

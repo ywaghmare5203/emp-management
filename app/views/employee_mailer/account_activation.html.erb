@@ -1,0 +1,7 @@
+<h1>1 Regt RLC LAD</h1>
+
+<p>Hello <%= @employee.service_no + " " + @employee.substantive_rank + " " + @employee.last_name %>,</p>
+
+<p>Welcome to the 1 Regiment RLC LAD Homepage! Click on the link below to activate your account:</p>
+
+<p><%= edit_account_activation_url(@employee.activation_token, email: @employee.email) %></p>

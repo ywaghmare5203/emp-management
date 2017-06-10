@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Previous date:</strong>
+  <%= @report.previous_date %>
+</p>
+
+<p>
+  <strong>Next date:</strong>
+  <%= @report.next_date %>
+</p>
+
+<p>
+  <strong>Mpar:</strong>
+  <%= @report.mpar %>
+</p>
+
+<p>
+  <strong>Mpar date:</strong>
+  <%= @report.mpar_date %>
+</p>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>

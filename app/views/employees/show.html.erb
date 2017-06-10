@@ -1,0 +1,146 @@
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<div class="container profile">
+  <div class="row">
+    <div class="span12">
+      <div class="well well-small clearfix">
+        <div class="row-fluid">
+          <div class="span2">
+             <img src="http://www.gravatar.com/avatar/f6112e781842d6a2b4636b35451401ff?s=125" class="img-polaroid"/>         
+          </div>
+          <div class="span4">
+             <h2><%= @employee.substantive_rank %> <%= @employee.first_name %> <%= @employee.last_name %></h2> 
+            <ul class="unstyled">
+              <li>Service Number: <%= @employee.service_no %></li>
+              <li><i class="icon-envelope"></i> jonniespratley@me.com</li>
+              <li><i class="icon-globe"></i> http://jonniespratley.me</li>
+            </ul>
+          </div>
+          <div class="span6">
+          <ul class="inline stats">
+               <li>
+                 <span>275</span>
+                 Friends
+              </li>
+              <li>
+                 <span>354</span>
+                 Followers
+              </li>
+               <li>
+                 <span>186</span>
+                 Photos
+              </li>
+          </ul>
+            <div><!--/span6-->
+            </div><!--/row-->
+      </div>
+      <!--Body content-->
+    </div>
+  </div>
+  <div class="well clearfix">
+            
+            <h3>Contact Numbers</h3> 
+
+            
+
+              <% if @employee.phones.blank? %>
+
+                <p><%= link_to "Add Contact Numbers", new_employee_phone_path(@employee), class: "btn btn-lg btn-primary" %></p>
+
+              <% else  %>
+
+                <p><%= link_to "Edit Contact Numbers", edit_employee_phone_path(@employee, :phones), class: "btn btn-lg btn-primary" %></p>
+
+              <% end %>
+
+            
+  </div>    
+
+   <div class="well clearfix">
+            
+            <h3>Spouse</h3> 
+
+            <% if can? :update, @spouse %>
+
+              <% if @employee.spouses.blank? %>
+
+              <p>This employee has no spouse.</p>
+
+                <p><%= link_to "Add Spouse", new_employee_spouse_path(@employee, :spouses), class: "btn btn-lg btn-primary" %></p>
+
+              <% else %>
+
+                <p><%= link_to "Edit Spouse Details", edit_employee_spouse_path(@employee, :spouses), class: "btn btn-lg btn-primary" %></p>
+                
+              <% end %>
+
+            <% end %>
+  </div>    
+
+   <div class="well clearfix">
+            
+            <h3>Addresses</h3> 
+
+            <% if can? :update, @address %>
+
+              <% if @employee.addresses.blank? %>
+
+                <p><%= link_to "Add Addresses", new_employee_address_path(@employee, :addresses), class: "btn btn-lg btn-primary" %></p>
+
+              <% else %>
+
+                <p><%= link_to "Edit Addresses", edit_employee_address_path(@employee, :addresses), class: "btn btn-lg btn-primary" %></p>
+                
+              <% end %>
+
+            <% end %>
+  </div>    
+
+   <div class="well clearfix">
+            
+            <h3>Next of Kins</h3> 
+
+            <% if can? :update, @next_of_kin %>
+
+              <% if @employee.next_of_kins.blank? %>
+
+                <p><%= link_to "Add Next of Kins", new_employee_next_of_kin_path(@employee, :next_of_kins), class: "btn btn-lg btn-primary" %></p>
+
+              <% else %>
+
+                <p><%= link_to "Edit Next of Kins", edit_employee_next_of_kin_path(@employee, :next_of_kins), class: "btn btn-lg btn-primary" %></p>
+                
+              <% end %>
+
+            <% end %>
+  </div>    
+
+  <div class="well clearfix">
+            
+            <h3>Medical Record</h3> 
+
+            <% if can? :update, @medical_record %>
+
+              <% if @employee.medical_record.blank? %>
+
+                <p><%= link_to "Add Medical Details", new_employee_medical_record_path(@employee, :medical_record), class: "btn btn-lg btn-primary" %></p>
+
+              <% else %>
+
+                <p><%= link_to "Edit Medical Details", edit_employee_medical_record_path(@employee, :medical_record), class: "btn btn-lg btn-primary" %></p>
+                
+              <% end %>
+
+            <% end %>
+  </div>    
+            
+
+
+
+            <div class="well clearfix">
+              
+              
+              
+              <img class="pull-right" src="http://kcdn3.klout.com/static/images/developers/dev-assets/powered-by-klout.png" width="150px"/>
+            </div>
+</div>

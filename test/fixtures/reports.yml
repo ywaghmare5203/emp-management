@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  previous_date: 2015-05-18
+  next_date: 2015-05-18
+  mpar: false
+  mpar_date: 2015-05-18
+
+two:
+  previous_date: 2015-05-18
+  next_date: 2015-05-18
+  mpar: false
+  mpar_date: 2015-05-18

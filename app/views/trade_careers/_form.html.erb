@@ -1,0 +1,16 @@
+<%= semantic_form_for @trade_career do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :paab_complete %>
+    <%= f.input :paab_result %>
+    <%= f.input :next_paab %>
+    <%= f.input :tiffy_maths_req %>
+    <%= f.input :tiffy_maths_complete %>
+    <%= f.input :class_2 %>
+    <%= f.input :class_1 %>
+    <%= f.input :artificer %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

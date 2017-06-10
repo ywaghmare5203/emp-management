@@ -1,0 +1,23 @@
+<%= semantic_form_for @employee.medical_record do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :pstat %>
+    <%= f.input :deployability %>
+    <%= f.input :hep_a %>
+    <%= f.input :hep_b %>
+    <%= f.input :diptheria %>
+    <%= f.input :polio %>
+    <%= f.input :tetanus %>
+    <%= f.input :typhoid %>
+    <%= f.input :yellow_fever %>
+    <%= f.input :mmr %>
+    <%= f.input :audio %>
+    <%= f.input :blood_group %>
+    <%= f.input :nato_cat %>
+    <%= f.input :dental_next %>
+    <%= f.input :remarks %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

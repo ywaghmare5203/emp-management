@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Employees</h1>
+
+<%= will_paginate %>
+
+<ul class="employees">
+  <% @employees.each do |employee| %>
+    <%= render @employees %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+<br>
+
+<%= link_to 'New Employee', new_employee_path %>

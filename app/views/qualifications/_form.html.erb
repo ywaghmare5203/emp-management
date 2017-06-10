@@ -1,0 +1,35 @@
+<%= form_for(@qualification) do |f| %>
+  <% if @qualification.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@qualification.errors.count, "error") %> prohibited this qualification from being saved:</h2>
+
+      <ul>
+      <% @qualification.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.input :type %>
+  </div>
+  <div class="field">
+    <%= f.input :title %>
+  </div>
+  <div class="field">
+    <%= f.input :grade %>
+  </div>
+  <div class="field">
+    <%= f.input :end_date %>
+  </div>
+  <div class="field">
+    <%= f.input :status %>
+  </div>
+  <div class="field">
+    <%= f.input :school %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

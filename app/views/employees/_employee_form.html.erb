@@ -1,0 +1,66 @@
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= semantic_form_for(@employee) do |f| %>      
+          <%= render 'shared/error_messages' %>
+            <fieldset id="employee-meta">
+                <ol>
+                    <li class="control-group">
+                        <%= f.input :first_name %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :last_name %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :service_no %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :date_of_birth, :as => :date_picker, :input_html => { :placeholder => "DD-MM-YYYY" } %>
+                    </li>
+                    <li class="control-group">                    
+                        <%= f.input :gender, :as => :radio, :collection => [["Male", true], ["Female", false]] %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :email %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :service_start_date, :as => :date_picker %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :substantive_rank, :as => :select, :collection => ["Cfn/Pte", "LCpl", "Cpl", "Sgt", "SSgt", "WO2", "WO1", "2Lt", "Lt", "Capt", "Maj"] %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :promotion_date, :as => :date_picker %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :passport_number %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :passport_expiry, :as => :date_picker %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :passport_country_of_origin, :as => :country, :priority_countries => ["United Kingdom"] %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :nationality, :as => :country, :priority_countries => ["United Kingdom"] %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :national_insurance %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :avatar, :as => :file %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :password %>
+                    </li>
+                    <li class="control-group">
+                        <%= f.input :password_confirmation %>
+                    </li>
+                </ol>
+            </fieldset>
+
+            <%= f.collection_select :role_ids, Role.all, :id, :role_details %>
+        <%= f.submit "Save changes", class: "btn btn-primary" %>
+        <% end %>
+    
+    </div>
+</div>

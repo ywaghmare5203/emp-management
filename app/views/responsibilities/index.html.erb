@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Responsibilities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @responsibilities.each do |responsibility| %>
+      <tr>
+        <td><%= responsibility.employee %></td>
+        <td><%= responsibility.name %></td>
+        <td><%= responsibility.description %></td>
+        <td><%= link_to 'Show', responsibility %></td>
+        <td><%= link_to 'Edit', edit_responsibility_path(responsibility) %></td>
+        <td><%= link_to 'Destroy', responsibility, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Responsibility', new_responsibility_path %>

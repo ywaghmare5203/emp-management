@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Roles</h1>
+
+
+
+<%= semantic_form_for(@employee) do |f| %>
+	<ul class="employees">
+	  <% for role in Role.all %>
+	    <%= render @roles %> <% f.input :employees, :as => :select %>
+	  <% end %>
+	</ul>
+<% end %>
+
+
+<br>
+
+<%= link_to 'New Role', new_role_path %>

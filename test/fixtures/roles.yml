@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee_id: 1
+  PID: MyString
+  description: MyString
+  ancestry: MyString
+  section: MyString
+
+two:
+  employee_id: 1
+  PID: MyString
+  description: MyString
+  ancestry: MyString
+  section: MyString
